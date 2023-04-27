@@ -1,10 +1,33 @@
-.VT-wrapp {
-}
+
 .VT-grid {
-  display: grid;
-  grid-template-columns: 500px 1fr 1fr;
+  display: flex;
   height: 566px;
+  justify-content: space-between;
+  padding-right: 40px;
 }
+
+
+.VT-grid1{
+  height: 500px;
+  width: 350px;
+  padding-left: 40px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 250px;
+}
+.VT-grid1 img{
+  height: 400px;
+}
+.selected-image{
+height: 400px;
+padding-top: 20px;
+text-align: center;
+}
+.selected-image img{
+  height: 400px;
+  border: 1px solid #222;
+  }
+
 @media screen and (max-width: 1500px) {
   .VT-grid {
     grid-template-columns: 500px 1fr;
@@ -28,8 +51,7 @@
   }
 }
 
-VT-dropdown {
-}
+
 .dropbtn {
   padding: 16px;
   font-size: 16px;
@@ -41,6 +63,7 @@ VT-dropdown {
   position: relative;
   display: inline-block;
   text-align: center;
+  margin-top: 20px;
 }
 
 .dropdown-content {
@@ -99,19 +122,31 @@ VT-dropdown {
 }
 
 .output {
-  border: 1px solid var(--orange);
-  height: 300px;
+  border: 2px solid var(--orange);
+  height: 400px;
+  width: 350px;
+  margin-bottom: 20px;
+}
+.buttons{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.heading {
+  margin-top: 20px;
+  text-align: center;
 }
 
 .ant-upload-drag-container {
-  background: url("../../images/image\ lgao.jpg") no-repeat center center;
   background-size: contain;
   opacity: 0.7;
 }
 
 .item-listing {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 8px;
 }
 

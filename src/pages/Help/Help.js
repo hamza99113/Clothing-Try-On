@@ -3,8 +3,8 @@ import './Help.css';
 
 const HelpPage = () => {
   return (
-    <div className="container">
-      <h1 className="title">Clothing Try-On Help</h1>
+    <div className="containers">
+      <h3>Clothing Try-On Help</h3>
       <div className="section">
         <h2 className="section-title">How does the clothing try-on feature work?</h2>
         <div className="section-content">

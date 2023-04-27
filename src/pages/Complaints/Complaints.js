@@ -32,7 +32,7 @@ const Complaints = () => {
           <label htmlFor="message">Message:</label>
           <textarea id="message" name="message" required></textarea>
         </div>
-        <button type="submit" className="submit-button">Submit</button>
+        <button type="submit" style={{ fontSize: '18px', padding: '10px 20px', borderRadius: '4px', border: 'none', backgroundColor: '#088178', color: '#fff', cursor: 'pointer', Width: '400px', transition: 'background-color 0.3s ease', ':hover': { backgroundColor: '#fff', color: '#4CAF50' } }}>Submit Complaint</button>
       </form>
     </div>
   );

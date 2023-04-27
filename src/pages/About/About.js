@@ -5,6 +5,7 @@ import Testimonial from "../About/Testimonial";
 import Contact from "../About/Contact";
 import Experience from "../About/Experience";
 import Work from "../About/Work";
+import { NavLink } from "react-router-dom";
 
 function Intro() {
   return (
@@ -22,8 +23,8 @@ Try on items, get accurate size visualization experience and style outfits
  all from within your elevated online store. Benefit from increased conversions, enhanced engagement, and significantly lower product returns.
           </span>
 
-          <button className=" button About-button">SignUp </button>
-        </div>
+          <NavLink to="/SignIn"><button className=" button About-button">SignUp </button></NavLink>
+        </div> 
 
         <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
         <div
@@ -46,6 +47,7 @@ Try on items, get accurate size visualization experience and style outfits
 
         <div>
           <Contact />
+          <Testimonial />
         </div>
       </div>
     </>

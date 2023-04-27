@@ -1,5 +1,5 @@
 {
-  "name": "fyp-virtual-try-on",
+  "name": "fyp-try-on",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,6 +21,7 @@
     "emailjs": "^4.0.1",
     "flickity": "^2.3.0",
     "framer-motion": "^7.6.7",
+    "history": "^5.3.0",
     "nvm": "0.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

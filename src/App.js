@@ -14,6 +14,9 @@ import Home from "./pages/Home";
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 import Help from './pages/Help/Help';
 import Complaints from './pages/Complaints/Complaints';
+import ChangePassword from './pages/ChangePassword/ChangePassword';
+import EditProfileDetails from './pages/EditProfileDetails/EditProfileDetails';
+import UserProfile from './pages/UserProfile/UserProfile';
 
 function App() {
   return (
@@ -31,6 +34,9 @@ function App() {
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />}/>
         <Route path="/Help" element={<Help />}/>
         <Route path="/Complaints" element={<Complaints/>}/>
+        <Route path="/ChangePassword" element={<ChangePassword/>}/>
+        <Route path="/EditProfileDetails" element={<EditProfileDetails/>}/>
+        <Route path="/UserProfile" element={<UserProfile/>}/>
       </Routes>
       <Footer />
     </div>

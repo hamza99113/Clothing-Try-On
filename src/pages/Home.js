@@ -1,16 +1,17 @@
 import React from "react";
 import Intro from "../components/Intro/Intro";
 import Services from "../components/Services/Services";
-import { useDispatch } from "react-redux";
-
-import { cartItem } from "../store/cartItem/cartItemSlice";
+import Banner from "../components/Banner/Banner";
+import Product from "../components/Product/Product";
 
 const Home = () => {
-  const dispatch = useDispatch();
   return (
     <>
       <Intro />
-      <Services />
+      <Services/>
+      <Product/>
+      <Banner/>
+      <Product/>
     </>
   );
 };

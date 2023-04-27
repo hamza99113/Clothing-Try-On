@@ -5,6 +5,7 @@ import glasses from "../../images/glasses.png";
 import humble from "../../images/humble.png";
 import Card from "../Card/Card";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 function Services() {
   const transition = {
@@ -21,7 +22,7 @@ function Services() {
           {" "}
           Mapping your favourite outfits on your 2d images  so <br /> you can visualize yourself in that outfit and make you buying decision more quickly.{" "}
         </span>
-        <button className="button s-button">About Us</button>
+        <NavLink to="/About"><button className=" button About-button">About Us</button></NavLink>
         <div className="blur s-blur" style={{ background: "#ABF1FF94" }}></div>
       </div>
 

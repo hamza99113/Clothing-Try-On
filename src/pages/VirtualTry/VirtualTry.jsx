@@ -16,10 +16,14 @@ import Webcam from "react-webcam";
 import { useDispatch } from "react-redux";
 import { cartItem } from "../../store/cartItem/cartItemSlice";
 
-import img1 from "../../images/img_1.png";
-import img2 from "../../images/img_2.png";
-import img3 from "../../images/img_3.png";
-import img4 from "../../images/img_4.png";
+import img1 from "../../images/Product_Img/3.jpg";
+import img2 from "../../images/Product_Img/4.jpg";
+import img3 from "../../images/Product_Img/5.jpg";
+import img4 from "../../images/Product_Img/8.jpg";
+import img5 from "../../images/Product_Img/1.jpg";
+import img6 from "../../images/Product_Img/2.jpg";
+import img7 from "../../images/Product_Img/6.jpg";
+import img8 from "../../images/Product_Img/7.jpg";
 
 const { Dragger } = Upload;
 const videoConstraints = {
@@ -139,6 +143,38 @@ function VirtualTry() {
       price: 400,
       totalPrice: 400,
     },
+    {
+      id: 5,
+      name: "Shoes",
+      image: img5,
+      quantity: 1,
+      price: 400,
+      totalPrice: 400,
+    },
+    {
+      id: 6,
+      name: "Shoes",
+      image: img6,
+      quantity: 1,
+      price: 400,
+      totalPrice: 400,
+    },
+    {
+      id: 7,
+      name: "Shoes",
+      image: img7,
+      quantity: 1,
+      price: 400,
+      totalPrice: 400,
+    },
+    {
+      id: 8,
+      name: "Shoes",
+      image: img8,
+      quantity: 1,
+      price: 400,
+      totalPrice: 400,
+    },
   ];
 
   return (
@@ -147,10 +183,51 @@ function VirtualTry() {
       {/* {console.log("item", item)} */}
       <div className="VT-wrapp">
         <div>
-          <SecondBar />
+         {/*<SecondBar /> */} 
         </div>
-        <div className="VT-grid">
-          <div>
+
+        <div style={{ textAlign: "center" }}>
+          <div style={{ padding: "10px" }}>
+            <div>
+              <h3 style={{ textAlign: "center", fontWeight: "bold" }}>
+                TryOn Catalouge
+              </h3>
+              <div className="item-listing">
+                {items.map((item) => (
+                  <div
+                    key={item.id}
+                    onClick={() => setSelectedImage(item.image)}
+                    className={
+                      selectedImage === item.image
+                        ? "item-selected item"
+                        : "" + "item"
+                    }
+                  >
+                    <img
+                      src={item.image}
+                      alt=""
+                      width={159}
+                      height={184}
+                      srcset=""
+                    />
+                    <p style={{ textAlign: "center" }}>{item?.name}</p>
+                    <button
+                      onClick={() => dispatch(cartItem(item))}
+                      className="button"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          </div>
+
+
+          <div className="VT-grid">
+          <div className="VT-grid1">
+            <h3>Uploded Image</h3>
             {!uploadImageURL ? (
               !driveObj ? (
                 !picture ? (
@@ -201,20 +278,14 @@ function VirtualTry() {
                       <p className="ant-upload-text">
                         Click or drag file to this area to upload
                       </p>
-                      <p className="ant-upload-hint" >
-                        Support for a single or bulk upload. Strictly prohibit
-                        from uploading company data or other band files
-                      </p>
+                      
                     </Dragger>
                   )
                 ) : (
                   <img
                     src={picture}
                     style={{
-                      width: "400px",
-                      height: "-webkit-fill-available",
                       objectFit: "cover",
-                      width: "100%",
                     }}
                     alt=""
                   />
@@ -229,10 +300,8 @@ function VirtualTry() {
                   }
                   // src="https://drive.google.com/uc?export=view&id=1VOS6M-0ys0g0Kz2AA3WbkDxSV9f0eRG7"
                   style={{
-                    width: "400px",
-                    height: "-webkit-fill-available",
+                    
                     objectFit: "cover",
-                    width: "100%",
                   }}
                   alt=""
                   srcset=""
@@ -244,10 +313,8 @@ function VirtualTry() {
                 src={uploadImageURL}
                 // src="https://drive.google.com/uc?export=view&id=1VOS6M-0ys0g0Kz2AA3WbkDxSV9f0eRG7"
                 style={{
-                  width: "400px",
-                  height: "-webkit-fill-available",
+                  
                   objectFit: "cover",
-                  width: "100%",
                 }}
                 alt=""
                 srcset=""
@@ -265,45 +332,6 @@ function VirtualTry() {
                 </span>
               </div>
             </div> */}
-          </div>
-
-          <div style={{ padding: "20px" }}>
-            <div>
-              <p style={{ textAlign: "center", fontWeight: "bold" }}>
-                TryOn Catalouge
-              </p>
-              <div className="item-listing">
-                {items.map((item) => (
-                  <div
-                    key={item.id}
-                    onClick={() => setSelectedImage(item.image)}
-                    className={
-                      selectedImage === item.image
-                        ? "item-selected item"
-                        : "" + "item"
-                    }
-                  >
-                    <img
-                      src={item.image}
-                      alt=""
-                      width={159}
-                      height={184}
-                      srcset=""
-                    />
-                    <p style={{ textAlign: "center" }}>{item?.name}</p>
-                    <button
-                      onClick={() => dispatch(cartItem(item))}
-                      className="button"
-                    >
-                      Add to Cart
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div style={{ textAlign: "center" }}>
             <div class="dropdown">
               <button class=" button dropbtn">Insert an Image</button>
               <div class="img-drop-down">
@@ -316,13 +344,24 @@ function VirtualTry() {
                 </span>
               </div>
             </div>
-            <div>
-              <img src={selectedImage} alt="" />
-            </div>
-            {/* <div className="output">output</div> */}
+          </div>
 
-            <div style={{ marginTop: "20px" }}>
+
+          <div className="selected-image">
+            <h3>Selected Image</h3>
+              <img src={selectedImage} alt="" />
+              <div style={{ marginTop: "20px" }}>
               <button className="button">Execute</button>
+            </div>
+          </div>
+
+          <div className="heading">
+            <h3>Output</h3>
+            <div className="output"></div>
+            <div className="buttons">
+            <button className="button Sb-buttons">Favorite</button>
+            <button className="button Sb-buttons">Share</button>
+            <button className="button Sb-buttons">Download</button>
             </div>
           </div>
         </div>

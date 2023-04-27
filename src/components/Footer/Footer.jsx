@@ -1,24 +1,76 @@
-import React from "react";
-import "./Footer.css";
-import Wave from "../../images/wave.png";
+import React from 'react';
+import './Footer.css';
 import Insta from "@iconscout/react-unicons/icons/uil-instagram";
 import Facebook from "@iconscout/react-unicons/icons/uil-facebook";
 import Gitub from "@iconscout/react-unicons/icons/uil-github";
+import logo from '../../images/logo.png';
+import { NavLink } from "react-router-dom";
 
-const Footer = () => {
+function Footer() {
   return (
-    <div className="footer">
-      <img src={Wave} alt="" style={{ width: "100%" }} />
-      <div className="f-content">
-        <span>VirtualTryOn@gmail.com</span>
-        <div className="f-icons">
+    <div className="color">
+    <div className="logo"><img src={logo} alt="" /></div>
+
+    <div className="section-p1">
+      <div className="col1">
+        <h4>Contact</h4>
+        <p><strong>Address: </strong> House no.1086, Street 1, E11/4, Islamabad</p>
+        <p><strong>Phone: </strong> (+92) 300 7862212 / (+92) 343 7862244</p>
+        <p><strong>Hours: </strong> 09:00 - 18:00 , Mon - Sat</p>
+      </div>
+
+
+      <div className="col2">
+        <h4>About</h4>
+        <NavLink to="/About" className="s-links">
+          <div className="s-options">About Us</div>
+        </NavLink>
+        <NavLink to="/Settings" className="s-links">
+          <div className="s-options">Setting</div>
+        </NavLink>
+        <NavLink to="/PrivacyPolicy" className="s-links">
+          <div className="s-options">Privacy Policy</div>
+        </NavLink>
+        <NavLink to="/Help" className="s-links">
+          <div className="s-options">Help</div>
+        </NavLink>
+        <NavLink to="/Complaints" className="s-links">
+          <div className="s-options"> Register Complaints</div>
+        </NavLink>
+      </div> 
+
+      
+      <div className="col3">
+        <h4>My Account</h4>
+        <NavLink to="/SignIn" className="s-links">
+          <div className="s-options">Sign In</div>
+        </NavLink>
+        <NavLink to="/SignUp" className="s-links">
+          <div className="s-options">Sign Up</div>
+        </NavLink>
+        <NavLink to="/Cart" className="s-links">
+          <div className="s-options">View Cart</div>
+        </NavLink>
+        <NavLink to="/Favourite" className="s-links">
+          <div className="s-options">Favourite</div>
+        </NavLink>
+      </div>
+
+
+      <div className="col4">
+          <h4>Follow Us</h4>
+          <div className="icon">
           <Insta color="white" size={"3rem"} />
           <Facebook color="white" size={"3rem"} />
           <Gitub color="white" size={"3rem"} />
-        </div>
+          </div>
+      </div>
+    </div>
+    <div className="copyright">
+        <p>2021 copyright reserved - HTML CSS ECommerce Website Template</p>
       </div>
     </div>
   );
-};
+}
 
 export default Footer;

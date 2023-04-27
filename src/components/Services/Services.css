@@ -2,15 +2,13 @@
   padding: 0 2rem 0 2rem;
   display: flex;
   height: 90vh;
-  margin-bottom: 8rem;
-  margin-top: 11.5rem;
-  margin-bottom: 13rem;
+  margin-bottom: 10rem;
 }
 .awesom {
   display: flex;
   flex-direction: column;
   position: relative;
-}
+} 
 .awesom > :nth-child(1) {
   color: var(--text);
   font-size: 3.1rem;
@@ -49,7 +47,8 @@
 }
 @media screen and (max-width: 480px) {
   .services {
-    margin-top: 46rem;
+    margin-left: 10px;
+    margin-top: 1rem;
     flex-direction: column;
     gap: 5rem;
     height: 66rem;
@@ -60,8 +59,11 @@
     display: flex;
     flex-direction: column;
     gap: 18rem;
+    width: 90%;
+    margin-left:15px;
   }
   .cards > * {
     position: static;
   }
 }
+

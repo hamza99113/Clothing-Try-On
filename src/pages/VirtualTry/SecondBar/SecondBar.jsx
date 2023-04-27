@@ -25,7 +25,7 @@ function SecondBar() {
     < ShoppingCartOutlinedIcon  style={{ color: 'white' }}/>
 </Badge>
             </NavLink>
-</div> 
+</div>  
    
   )
 }

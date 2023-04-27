@@ -1,14 +1,17 @@
-import React from "react";
+import React from 'react';
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import logo from "../../images/logo.png"
+import { useSelector} from "react-redux";
+import Badge from '@mui/material/Badge';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 
 function Navbar() {
   let activeStyle = {
-    color: "black",
     textDecoration: "underLine",
   };
+  const cartItem = useSelector((state) => state.cartItems);
   return (
     <div className="n-wrapper">
       <div className="n-left">
@@ -29,7 +32,7 @@ function Navbar() {
             <NavLink className="navlink" 
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
               to="virtualTry"
-            >
+            > 
               {" "}
               <li className="nav-li">TryOn</li>{" "}
             </NavLink>
@@ -63,16 +66,22 @@ function Navbar() {
               {" "}
               <li className="nav-li">Search Bar</li>
             </NavLink>
+            <NavLink to="/Cart" className="navlink-Cart" >
+          <Badge badgeContent={cartItem.length} color="primary">
+            < ShoppingCartOutlinedIcon  style={{ color: 'Black' }}/>
+          </Badge>
+        </NavLink> 
           </ul>
         </div>
-        <NavLink to="/SignUp" style={{ paddingRight: "26px", paddingTop:"16px" }}>
+        <NavLink to="/SignUp" style={{ paddingRight: "20px",paddingLeft: "0px", paddingTop:"16px" }}>
           <button className="button navLink">SignUp</button>
         </NavLink>
-        <NavLink to="/SignIn" style={{ paddingRight: "26px", paddingTop:"16px" }}>
+        <NavLink to="/SignIn" style={{ paddingRight: "20px", paddingTop:"16px" }}>
           <button className="button navLink">Signin</button>
         </NavLink>
       </div>
     </div>
+
   );
 }
 
