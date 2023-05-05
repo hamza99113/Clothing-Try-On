@@ -10,7 +10,7 @@
 .sub-main {
   display: flex;
   justify-content: center;
-  height: 590px;
+  height: 620px;
   width: 35%;
   box-shadow: 11px 23px 31px 13px rgb(255 2 4 / 53%);
   padding-top: 30px;
@@ -54,7 +54,9 @@ input {
   outline: none;
   background-color: #fff;
 }
-
+input[type="password"] {
+  font-size: 16px;
+}
 .email {
   height: 38px;
   width: 59px;
@@ -66,21 +68,58 @@ input {
   padding-left: 70px;
   font-size: 15px;
 }
-.second-input {
-  padding-top: 20px;
-}
-
 .sign-button {
   width: 301px;
+  margin-bottom: 10px;
 }
 .login-button {
   padding-top: 25px;
 }
+.google-signin-button {
+  width: 300px;
+  margin-bottom: 10px;
+}
+
 
 .link {
   font-size: 25px;
   font-weight: 400;
 }
+
 a {
-  color: blue;
+  color: #222;
+}
+
+
+
+.input-field-style {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.input-field-style:focus {
+  outline: none;
+  border-bottom: 2px solid #088178;
+}
+
+.password-checkbox {
+  align-items: center;
+  font-size: 16px;
+  color: #222;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 4px;
+}
+
+.password-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
 }

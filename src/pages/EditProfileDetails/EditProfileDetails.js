@@ -33,7 +33,7 @@ function EditProfileDetails() {
   };
 
   return (
-    <div>
+    <div className='editpro'>
       <h2>Edit Profile Details</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
@@ -68,7 +68,8 @@ function EditProfileDetails() {
           <option value="other">Other</option>
         </select>
 
-        <button type="submit">Save Changes</button>
+        <button type='submit'>Save Changes</button>
+
         <button type="button" onClick={handleCancel}>Cancel</button>
       </form>
     </div>

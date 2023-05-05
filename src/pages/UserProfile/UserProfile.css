@@ -8,6 +8,58 @@
   width: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+} 
+
+.edit-profile-picture{
+  display: flex;
+  flex-direction: column;
+}
+
+label[for="profile-picture"] {
+  margin-bottom: 0px;
+  width: 500px;
+  
+}
+.remove-button{
+  margin-top: 10px;
+  width: 100px;
+}
+
+.sett-bt{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.logout-button{
+  margin-top: 10px;
+  width: 120px;
+  height: 50px;
+}
+.textsss{
+  color: white;
+}
+.textsss:hover{
+  color: #088178;
+}
+.changePass-button a {
+  color: white;
+  background-color: #088178;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.changePass-button a:hover {
+  background-color: white;
+  color: #088178;
+}
+
+.editdetails-button{
+  width: 220px;
+  height: 50px;
+}
+.editdetails-button:hover{
+  background-color: white;
+  color: #088178;
 }
 
 .user-avatar img {
@@ -15,6 +67,9 @@
   height: 150px;
   border-radius: 50%;
   margin-bottom: 1rem;
+}
+.user-avatar {
+  width:28rem;
 }
 
 .user-info {

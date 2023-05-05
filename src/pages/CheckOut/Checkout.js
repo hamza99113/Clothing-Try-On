@@ -15,6 +15,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import AddressForm from "./AddressForm";
 import PaymentForm from "./PaymentForm";
 import Review from "./Review";
+import { lighten } from '@mui/material/styles';
 function Copyright() {
   return (
     <Typography variant="body2" color="white" align="center">
@@ -120,7 +121,7 @@ export default function Checkout() {
           sx={{
             my: { xs: 3, md: 6 },
             p: { xs: 2, md: 3 },
-            background: " linear-gradient(180deg,#fdc50feb 26.71%, #fb982f00 99.36%)",
+            background: lighten('#088178', 0.3),
           }}
         >
           <Typography
@@ -175,9 +176,17 @@ export default function Checkout() {
                 {activeStep !== 0 && (
                   <Button
                     className="button"
-                    style={{  backgroundColor: "black", color: "white"}}
+                    style={{  backgroundColor: "088178", color: "white"}}
                     onClick={handleBack}
                     sx={{ mt: 3, ml: 1 }}
+                    onMouseOver={(e) => {
+                      e.target.style.backgroundColor = "white";
+                      e.target.style.color = "#088178";
+                    }}
+                    onMouseOut={(e) => {
+                      e.target.style.backgroundColor = "#088178";
+                      e.target.style.color = "white";
+                    }}
                   >
                     Back
                   </Button>
@@ -189,6 +198,14 @@ export default function Checkout() {
                   variant="contained"
                   onClick={handleNext}
                   sx={{ mt: 3, ml: 1 }}
+                  onMouseOver={(e) => {
+                    e.target.style.backgroundColor = "white";
+                    e.target.style.color = "#088178";
+                  }}
+                  onMouseOut={(e) => {
+                    e.target.style.backgroundColor = "#088178";
+                    e.target.style.color = "white";
+                  }}
                 >
                   {activeStep === steps.length - 1 ? "Place order" : "Next"}
                 </Button>

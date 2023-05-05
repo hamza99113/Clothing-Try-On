@@ -27,46 +27,36 @@ function UserProfile() {
         <img src={profilePicture} alt="user avatar" />
         <div className="edit-profile-picture">
           <label htmlFor="profile-picture">
-            <i className="fas fa-camera"></i>
+            <h4>Profile pictue</h4>
           </label>
           <input
             type="file"
             id="profile-picture"
             onChange={handlePictureChange}
           />
-          <button onClick={handleRemovePicture}>Remove</button>
+          <button className="remove-button"onClick={handleRemovePicture}>Remove</button>
         </div>
       </div>
       <div className="user-info">
         <h2 className="user-name">John Doe</h2>
-        <p className="user-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at semper odio. Sed vitae commodo risus, ut cursus tellus.</p>
-        <ul className="user-stats">
-          <li>
-            <span className="stat-label">Followers:</span>
-            <span className="stat-value">500</span>
-          </li>
-          <li>
-            <span className="stat-label">Following:</span>
-            <span className="stat-value">250</span>
-          </li>
-          <li>
-            <span className="stat-label">Posts:</span>
-            <span className="stat-value">1000</span>
-          </li>
-        </ul>
+      </div>
+        
+        <div className='sett-bt'>
         <button className="logout-button" onClick={handleLogout}>Logout</button>
 
-        <button>
+        <button className="changePass-button">
         <NavLink to="/ChangePassword">
-            <div>Change Password</div>
+            <div className='textsss'>Change Password</div>
         </NavLink>
         </button>
         
+        <button className="editdetails-button">
         <NavLink to="/EditProfileDetails">
-            <div>Edit Profile Details</div>
+            <div className='textsss'>Edit Details</div>
         </NavLink>
+        </button>
+        </div>
       </div>
-    </div>
   );
 }
 

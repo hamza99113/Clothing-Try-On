@@ -26,9 +26,9 @@
     border-radius: 20px;
     cursor: pointer;
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-    margin: 15px 0;
     transition: 0.2s ease;
     position: relative;
+    margin: 15px 0;
     
 }
 
@@ -38,7 +38,8 @@
 }
 
 .pro:hover{
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.09);
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.16);
+    transition: 0.8s ease;
 }
 
 .pro .des{
@@ -58,13 +59,11 @@
     font-weight: 400;
 }
 
-.pro .des h4{
-    padding-top: 7px;
+.last h4{
     color: #088178;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 700;
-    display: flex;
-    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .pro .des .star{
@@ -84,6 +83,25 @@
     flex-basis: 25%;
 }
 
+.buttonss{
+    width: 131px;
+    height: 52px;
+    border-radius: 39px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 11px 26px 11px 26px;
+    background: #088178;
+}
+.buttonss:hover{
+    background-color: white;
+    color: #088178;
+}
+.last{
+    display: flex;
+    gap: 40px;
+}
+ 
 @media (max-width: 799px){
     .product-container {
         /*for removing irregular space between products*/

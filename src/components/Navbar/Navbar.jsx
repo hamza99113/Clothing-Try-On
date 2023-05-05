@@ -62,15 +62,11 @@ function Navbar() {
               <li className="nav-li">Complaints</li>
             </NavLink>
 
-            <NavLink to="/SearchBar" className="navlink" style={({ isActive }) => (isActive ? activeStyle : undefined)}>
-              {" "}
-              <li className="nav-li">Search Bar</li>
-            </NavLink>
             <NavLink to="/Cart" className="navlink-Cart" >
-          <Badge badgeContent={cartItem.length} color="primary">
-            < ShoppingCartOutlinedIcon  style={{ color: 'Black' }}/>
-          </Badge>
-        </NavLink> 
+              <Badge badgeContent={cartItem.length} color="primary">
+                < ShoppingCartOutlinedIcon  style={{ color: 'Black' }}/>
+              </Badge>
+            </NavLink> 
           </ul>
         </div>
         <NavLink to="/SignUp" style={{ paddingRight: "20px",paddingLeft: "0px", paddingTop:"16px" }}>

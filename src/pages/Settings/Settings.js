@@ -21,10 +21,6 @@ function Settings(){
           <div className="s-title">Dark Mode Settings</div>
           <div className="s-option">Dark Mode</div>
         </div>
-        <div className="s-section">
-          <div className="s-title">Notification Settings</div>
-          <div className="s-option">Enable Push Notifications</div>
-        </div>
       </div>
     </div>
   );

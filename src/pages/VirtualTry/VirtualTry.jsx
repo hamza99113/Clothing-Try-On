@@ -24,6 +24,7 @@ import img5 from "../../images/Product_Img/1.jpg";
 import img6 from "../../images/Product_Img/2.jpg";
 import img7 from "../../images/Product_Img/6.jpg";
 import img8 from "../../images/Product_Img/7.jpg";
+import ProductBannar from "../../components/ProductBannar/ProductBannar";
 
 const { Dragger } = Upload;
 const videoConstraints = {
@@ -179,6 +180,7 @@ function VirtualTry() {
 
   return (
     <>
+    <ProductBannar/>
       {console.log("todos", todos)}
       {/* {console.log("item", item)} */}
       <div className="VT-wrapp">
@@ -203,6 +205,7 @@ function VirtualTry() {
                         : "" + "item"
                     }
                   >
+                    <div className="products-container">
                     <img
                       src={item.image}
                       alt=""
@@ -210,7 +213,8 @@ function VirtualTry() {
                       height={184}
                       srcset=""
                     />
-                    <p style={{ textAlign: "center" }}>{item?.name}</p>
+                    </div>
+                    <p style={{ textAlign: "center" , color:"#222"}}>{item?.name}</p>
                     <button
                       onClick={() => dispatch(cartItem(item))}
                       className="button"

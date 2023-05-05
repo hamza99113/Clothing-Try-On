@@ -12,6 +12,10 @@
   margin-top: 15px;
   font-size: 5px;
 } 
+
+.section-p1 .col1 p{
+  color: white;
+}
 .logo {
   flex: 1;
 }
@@ -112,6 +116,7 @@ p {
 
   p {
     font-size: 12px;
+    color: white;
   }
 }
 

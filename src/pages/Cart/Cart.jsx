@@ -1,8 +1,5 @@
 import React from "react";
 import "./Cart.css";
-import img1 from "./../../images/img_1.jpg";
-import img2 from "./../../images/img_2.jpg";
-import img3 from "./../../images/img_3.jpg";
 
 import { useSelector, useDispatch } from "react-redux";
 
@@ -59,7 +56,6 @@ function Cart() {
               <div className="prices">
                 <div className="amount">${item?.totalPrice}</div>
                 <div className="save">
-                  <u>Save for later</u>
                 </div>
                 <div
                   onClick={() => dispatch(removeItem(item))}

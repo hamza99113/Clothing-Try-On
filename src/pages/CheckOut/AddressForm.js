@@ -5,6 +5,7 @@ import TextField from "@mui/material/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+
 const useStyles = makeStyles({
   input: {
     color: "white",
@@ -30,7 +31,7 @@ export default function AddressForm({
       <Typography  variant="h6" gutterBottom>
         Shipping address
       </Typography>
-      <Grid className="color" container spacing={3}>
+      <Grid>
         <Grid item xs={12} sm={6}>
           <TextField
             inputProps={{ className: classes.input }}

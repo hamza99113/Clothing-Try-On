@@ -4,9 +4,46 @@ import profile from "../../images/profile.png";
 import email from "../../images/email.jpg";
 import pass from "../../images/pass.png";
 import SignUp from "../SignUp/SignUp";
-
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
+
 function SignIn() {
+
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
+  const handleTogglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
+
+
+
+  const onSignIn = (googleUser) => {
+    const email = googleUser.getBasicProfile().getEmail();
+    // handle sign-in with Google on the server-side
+  };
+
+  const renderGoogleSignInButton = () => {
+    window.gapi.signin2.render("google-signin-button", {
+      scope: "email",
+      width: 240,
+      height: 50,
+      longtitle: true,
+      theme: "dark",
+      onsuccess: onSignIn,
+      client_id: "129606066637-576fp8o6m5el8qhetbaaemdb4r8u2e3s.apps.googleusercontent.com"
+    });
+  };
+
+  React.useEffect(() => {
+    // load Google Sign-In API script
+    const script = document.createElement("script");
+    script.src = "https://apis.google.com/js/platform.js";
+    script.async = true;
+    script.defer = true;
+    script.onload = renderGoogleSignInButton;
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <div className="main">
       <div className="sub-main">
@@ -20,7 +57,7 @@ function SignIn() {
             <h1>SignIn Page</h1>
 
             <div>
-              <img src={email} alt="email" className="email" />
+              
               <input
                 type="text"
                 placeholder="user name"
@@ -29,21 +66,37 @@ function SignIn() {
             </div>
 
             <div className="second-input">
-              <img src={pass} alt="pass" className="email" />
               <input
-                type="password"
-                placeholder="user name"
+                type={passwordVisible ? "text" : "password"}
+                placeholder="password"
                 className="name input-field-style"
               />
+              
+              <label className="password-checkbox">
+              <input
+                type="checkbox"
+                checked={passwordVisible}
+                onChange={handleTogglePasswordVisibility}/>Show Password
+              </label>
+
             </div>
             <div className="login-button">
               <button className="button sign-button">Signin</button>
             </div>
 
+            <div className="google-button">
+              <button
+                id="google-signin-button"
+                className="button google-signin-button"
+              >
+                Sign in with Google
+              </button>
+            </div>
+
             <p className="link">
               <NavLink to="/SignUp">
                 {" "}
-                <a href="#">Forgot password ?</a>
+                <a href="#">Forgot password?</a>
               </NavLink>
               Or
               <NavLink to="/SignUp">

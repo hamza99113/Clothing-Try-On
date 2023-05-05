@@ -18,28 +18,28 @@ function SignUp() {
           <div>
             <h1>SignUp Page</h1>
             <div style={{ paddingTop: "20px" }}>
-              <img src={pass} alt="pass" className="su-email" />
+              
               <input
                 type="text"
-                placeholder="Firstname"
+                placeholder="Username"
                 className="su-name input-field-style"
               />
             </div>
 
             <div style={{ paddingTop: "20px" }}>
-              <img src={email} alt="email" className="su-email" />
+              
               <input
                 type="text"
-                placeholder="user name or email"
+                placeholder="Email"
                 className="su-name input-field-style"
               />
             </div>
 
             <div className="su-second-input">
-              <img src={pass} alt="pass" className="su-email" />
+              
               <input
                 type="password"
-                placeholder="user name"
+                placeholder="Password"
                 className="su-name input-field-style"
               />
             </div>
