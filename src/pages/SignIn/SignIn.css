@@ -2,20 +2,21 @@
   text-align: center;
   justify-content: center;
   display: flex;
-  padding-top: 90px;
+  padding-top: 40px;
   padding-bottom: 90px;
-  /* background-color: #e1e3eb; */
- 
+}
+.heading-signin h1{
+  color: #222;
 }
 .sub-main {
-  display: flex;
+  display: flex; 
   justify-content: center;
   height: 620px;
   width: 35%;
-  box-shadow: 11px 23px 31px 13px rgb(255 2 4 / 53%);
+  box-shadow: 11px 23px 31px 13px rgba(11, 146, 134, 0.53);
   padding-top: 30px;
   border-radius: 5px;
-  background: linear-gradient(180deg,#fdc50feb 26.71%, #fb982f00 99.36%);
+  background: linear-gradient(180deg,#088178 26.71%, #fb982f00 99.36%);
 }
 @media screen and (max-width: 990px) {
   .sub-main {
@@ -30,7 +31,7 @@
   display: flex;
 }
 .container-image {
-  background-color: rgba(251, 161, 40, 0.42);
+  background-color: rgba(30, 164, 140, 0.70);
   border-radius: 150px;
   align-items: center;
   display: flex;
@@ -48,8 +49,7 @@ input {
   width: 300px;
   height: 50px;
   border-radius: 60px;
-  background: linear-gradient(180deg, #fdc50f 26.71%, #fb982f 99.36%);
-  box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
+  background: linear-gradient(180deg, #088178 26.71%, #1faaa1 99.36%);
   border: none;
   outline: none;
   background-color: #fff;
@@ -82,9 +82,12 @@ input[type="password"] {
 
 
 .link {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 400;
+  color: #222;
+  margin-top: 15px;
 }
+
 
 a {
   color: #222;

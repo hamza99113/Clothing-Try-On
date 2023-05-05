@@ -4,9 +4,8 @@ import './PrivacyPolicy.css';
 const PrivacyPolicy = () => {
   return (
     <div className="privacy"> 
-      <h2>Privacy Policy</h2>
+      <h1>Privacy Policy</h1>
       <p>Your privacy is important to us. This privacy policy outlines the types of personal information we collect and how we use it when you use our clothing TryOn application.</p>
-
       <h2>Information We Collect</h2>
       <p>When you use our application, we may collect the following types of personal information:</p>
       <ul>

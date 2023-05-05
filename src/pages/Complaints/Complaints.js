@@ -4,19 +4,19 @@ import './Complaints.css';
 const Complaints = () => {
   return (
     <div className="container">
-      <h1 className="title">File a Complaint</h1>
+      <h1>File a Complaint</h1>
       <form className="complaint-form">
         <div className="form-group">
           <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="name" className='editpro-label' required />
         </div>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" className='editpro-label' required />
         </div>
         <div className="form-group">
           <label htmlFor="phone">Phone:</label>
-          <input type="tel" id="phone" name="phone" required />
+          <input type="tel" id="phone" name="phone" className='editpro-label' required />
         </div>
         <div className="form-group">
           <label htmlFor="complaint-type">Complaint Type:</label>
@@ -32,7 +32,7 @@ const Complaints = () => {
           <label htmlFor="message">Message:</label>
           <textarea id="message" name="message" required></textarea>
         </div>
-        <button type="submit" style={{ fontSize: '18px', padding: '10px 20px', borderRadius: '4px', border: 'none', backgroundColor: '#088178', color: '#fff', cursor: 'pointer', Width: '400px', transition: 'background-color 0.3s ease', ':hover': { backgroundColor: '#fff', color: '#4CAF50' } }}>Submit Complaint</button>
+        <button type='submit'>Submit Complaint</button>
       </form>
     </div>
   );

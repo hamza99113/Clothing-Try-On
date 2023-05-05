@@ -49,7 +49,7 @@ const ChangePasswordPage = () => {
   };
 
   return (
-    <div>
+    <div className='ChangePasswordPage'>
       <h1>Change Password</h1>
       <form onSubmit={handleSubmit}>
         <div>

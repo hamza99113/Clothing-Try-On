@@ -1,4 +1,4 @@
-#banner{
+#probanner{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,20 +6,20 @@
     text-align: center;
     background-image: url("../../images/Unsplash/47.jpg");
     background-size: cover;
-    background-position-y: 30%;
+    background-position-y: 35%;
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     margin-bottom: 20px;
 }
 
 
-#banner h2{
+#probanner h2{
     color: white;
     font-size: 30px;
     padding: 10px 0;
 }
 
-#banner h2 span{
+#probanner h2 span{
     color: white;
     font-size: 80px;
     font-weight: 700;

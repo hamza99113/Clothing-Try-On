@@ -44,17 +44,18 @@ function UserProfile() {
         <div className='sett-bt'>
         <button className="logout-button" onClick={handleLogout}>Logout</button>
 
-        <button className="changePass-button">
         <NavLink to="/ChangePassword">
-            <div className='textsss'>Change Password</div>
+          <button className="changePass-button">
+            Change Password
+          </button>
         </NavLink>
-        </button>
         
-        <button className="editdetails-button">
         <NavLink to="/EditProfileDetails">
-            <div className='textsss'>Edit Details</div>
+          <button className="editdetails-button">
+            Edit Details
+          </button>
         </NavLink>
-        </button>
+        
         </div>
       </div>
   );

@@ -35,26 +35,24 @@ label[for="profile-picture"] {
   width: 120px;
   height: 50px;
 }
-.textsss{
-  color: white;
-}
-.textsss:hover{
-  color: #088178;
-}
-.changePass-button a {
+
+.changePass-button{
   color: white;
   background-color: #088178;
   border-radius: 5px;
   text-align: center;
+  margin-top: 10px;
+  height: 50px;
 }
 
-.changePass-button a:hover {
+.changePass-button:hover {
   background-color: white;
   color: #088178;
 }
 
 .editdetails-button{
-  width: 220px;
+  margin-top: 10px;
+  width: 120px;
   height: 50px;
 }
 .editdetails-button:hover{

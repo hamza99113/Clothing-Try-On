@@ -46,8 +46,8 @@ Try on items, get accurate size visualization experience and style outfits
         </div>
 
         <div>
+        <Testimonial />
           <Contact />
-          <Testimonial />
         </div>
       </div>
     </>

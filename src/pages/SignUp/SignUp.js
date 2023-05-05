@@ -15,7 +15,7 @@ function SignUp() {
               <img src={profile} alt="profile" className="profile" />
             </div>
           </div>
-          <div>
+          <div className="heading-signup">
             <h1>SignUp Page</h1>
             <div style={{ paddingTop: "20px" }}>
               
@@ -47,8 +47,7 @@ function SignUp() {
               <button className="button signup-button">SignUp</button>
             </div>
 
-            <p className="su-link">
-              <a href="#">Forgot password ?</a> Or
+            <p className="su-link"> Already have account?
               <NavLink to="/SignIn">
                 <a href="#">Sign In</a>
               </NavLink>

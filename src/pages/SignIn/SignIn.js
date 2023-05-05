@@ -53,7 +53,7 @@ function SignIn() {
               <img src={profile} alt="profile" className="profile" />
             </div>
           </div>
-          <div>
+          <div className="heading-signin">
             <h1>SignIn Page</h1>
 
             <div>
@@ -93,12 +93,7 @@ function SignIn() {
               </button>
             </div>
 
-            <p className="link">
-              <NavLink to="/SignUp">
-                {" "}
-                <a href="#">Forgot password?</a>
-              </NavLink>
-              Or
+            <p className="link">Don't have an Account?
               <NavLink to="/SignUp">
                 <a href="#">Sign Up</a>
               </NavLink>
