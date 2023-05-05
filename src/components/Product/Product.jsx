@@ -13,7 +13,7 @@ import { NavLink} from 'react-router-dom';
 function ProductItem() {
    
   return (
-    <div className="text">
+    <div className="text"> 
         <h4>Featured Products</h4>
         <p>Summer Collection New Modern Design</p>
         <div className="product-container">

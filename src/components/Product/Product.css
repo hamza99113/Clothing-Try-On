@@ -3,6 +3,7 @@
     flex-wrap:wrap ;
     justify-content: space-between;
     padding: 20px;
+    margin-right: 0px;
 }
 .text h4{
     font-size: 60px;
@@ -89,7 +90,7 @@
     border-radius: 39px;
     border: none;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     padding: 11px 26px 11px 26px;
     background: #088178;
 }
