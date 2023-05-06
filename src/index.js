@@ -6,16 +6,18 @@ import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
 import VirtualTryOn from "./pages/VirtualTry/VirtualTry";
 import { Provider } from "react-redux";
 import store from "./store/store";
+import {ThemeProvider} from "./Context";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </BrowserRouter>
-    {/* <App /> */}
-  </React.StrictMode>,
+  <ThemeProvider>
+    <React.StrictMode>
+      <BrowserRouter>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </BrowserRouter>
+    </React.StrictMode>
+  </ThemeProvider>,
   document.getElementById("root")
 );
 

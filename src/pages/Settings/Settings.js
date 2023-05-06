@@ -19,7 +19,9 @@ function Settings(){
         </div>
         <div className="s-section">
           <div className="s-title">Dark Mode Settings</div>
+          <NavLink to="/Toggle">
           <div className="s-option">Dark Mode</div>
+          </NavLink>
         </div>
       </div>
     </div>

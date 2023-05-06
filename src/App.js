@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./App.css"; 
 import Navbar from "./components/Navbar/Navbar";
 import { Routes, Route } from "react-router-dom";
 import VirtualTry from "./pages/VirtualTry/VirtualTry";
@@ -17,10 +17,17 @@ import Complaints from './pages/Complaints/Complaints';
 import ChangePassword from './pages/ChangePassword/ChangePassword';
 import EditProfileDetails from './pages/EditProfileDetails/EditProfileDetails';
 import UserProfile from './pages/UserProfile/UserProfile';
+import Toggle from "./pages/Toggle/Toggle";
+import { useContext } from "react";
+import { themeContext } from "./Context";
 
 function App() {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
-    <div className="App">
+    <div className="App" style={{
+      background: darkMode ? "black" : ""
+    }}>
       <Navbar />
       <Routes>
         <Route path="/SignIn" element={<SignIn />} />
@@ -37,6 +44,7 @@ function App() {
         <Route path="/ChangePassword" element={<ChangePassword/>}/>
         <Route path="/EditProfileDetails" element={<EditProfileDetails/>}/>
         <Route path="/UserProfile" element={<UserProfile/>}/>
+        <Route path="/Toggle" element={<Toggle/>}/>
       </Routes>
       <Footer />
     </div>
