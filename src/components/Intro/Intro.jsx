@@ -1,5 +1,5 @@
-import React from 'react'
-import './Intro.css'
+import React from 'react';
+import './Intro.css';
 import { NavLink } from 'react-router-dom';
 
 

@@ -1,8 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Cart.css";
-
 import { useSelector, useDispatch } from "react-redux";
-
 import { NavLink } from "react-router-dom";
 import {
   removeItem,
@@ -10,17 +8,26 @@ import {
   removeItemQuantity,
   removeAllItems,
 } from "../../store/cartItem/cartItemSlice";
+import { themeContext } from "../../Context";
 
 function Cart() {
-  const cartItem = useSelector((state) => state.cartItems);
 
+  // context
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
+
+  const cartItem = useSelector((state) => state.cartItems);
   const dispatch = useDispatch();
 
   return (
     <>
       {console.log(cartItem)}
-      <div className="Cart">
-        <div className="Cart-Container">
+      <div className="Cart" style={{ 
+      background: darkMode ? "#222" : ""}}>
+        <div className="Cart-Container" style={{ 
+      background: darkMode ? "#222" : "", 
+      boxShadow: darkMode ? "0 0 10px rgba(255, 255, 255, 0.5)" : "none"
+    }}>
           <div className="Header">
             <h3 className="Heading">Shopping Cart</h3>
             <h5 className="Action" onClick={() => dispatch(removeAllItems())}>
@@ -29,13 +36,13 @@ function Cart() {
           </div>
 
           {cartItem?.map((item) => (
-            <div key={item?.id} className="Cart-Items">
+            <div key={item?.id} className="Cart-Items" >
               <div className="image-box">
                 <img src={item?.image} style={{ height: "120px" }} />
               </div>
               <div className="about">
-                <h1 className="title">{item?.name}</h1>
-                <h3 className="subtitle">Size</h3>
+                <h1 className="title" style={{ color: darkMode ? "white" : "" }}>{item?.name}</h1>
+                <h3 className="subtitle" style={{ color: darkMode ? "white" : "" }}>Size</h3>
                 <img src={item?.image} style={{ height: "30px" }} />
               </div>
               <div className="counter">
@@ -45,7 +52,7 @@ function Cart() {
                 >
                   +
                 </div>
-                <div className="count">{item?.quantity}</div>
+                <div className="count" style={{ color: darkMode ? "white" : "" }}>{item?.quantity}</div>
                 <div
                   className="btn"
                   onClick={() => dispatch(removeItemQuantity(item))}
@@ -53,8 +60,8 @@ function Cart() {
                   -
                 </div>
               </div>
-              <div className="prices">
-                <div className="amount">${item?.totalPrice}</div>
+              <div className="prices" >
+                <div className="amount" style={{ color: darkMode ? "white" : "" }}>${item?.totalPrice}</div>
                 <div className="save">
                 </div>
                 <div
@@ -73,10 +80,10 @@ function Cart() {
           <div className="checkout">
             <div className="total">
               <div>
-                <div className="Subtotal">Sub-Total</div>
-                <div className="items">{cartItem?.length} items</div>
+                <div className="Subtotal" style={{ color: darkMode ? "white" : "" }}>Sub-Total</div>
+                <div className="items" style={{ color: darkMode ? "white" : "" }}>{cartItem?.length} items</div>
               </div>
-              <div className="total-amount">
+              <div className="total-amount" style={{ color: darkMode ? "white" : "" }}>
                 $
                 {cartItem?.length > 0
                   ? cartItem?.reduce(

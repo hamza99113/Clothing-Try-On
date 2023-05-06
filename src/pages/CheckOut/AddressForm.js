@@ -6,11 +6,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 
-const useStyles = makeStyles({
-  input: {
-    color: "white",
-  },
-});
 export default function AddressForm({
   firstName,
   LastName,
@@ -25,7 +20,6 @@ export default function AddressForm({
   setCity,
   setCountry,
 }) {
-  const classes = useStyles();
   return (
     <React.Fragment>
       <Typography  variant="h6" gutterBottom>
@@ -34,7 +28,6 @@ export default function AddressForm({
       <Grid>
         <Grid item xs={12} sm={6}>
           <TextField
-            inputProps={{ className: classes.input }}
             required
             id="firstName"
             name="firstName"
@@ -137,7 +130,6 @@ export default function AddressForm({
             control={
               <Checkbox
                 sx={{ color: "black" }}
-                color="secondary"
                 name="saveAddress"
                 value="yes"
               />

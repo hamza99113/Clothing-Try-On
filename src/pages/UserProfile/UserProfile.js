@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
+import React, {useContext, useState } from 'react';
 /*import { useHistory } from 'react-router-dom';*/
 import './UserProfile.css';
 import { NavLink } from "react-router-dom";
+import { themeContext } from "../../Context";
 
 function UserProfile() {
+
+  // context
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
+
+  
   const [profilePicture, setProfilePicture] = useState('https://via.placeholder.com/150');
   /*const history = useHistory();*/
 
@@ -22,7 +29,9 @@ function UserProfile() {
   };
 
   return (
-    <div className="user-profile-container">
+    <div className="user-profile-container" style={{ 
+      boxShadow: darkMode ? "0 0 10px rgba(255, 255, 255, 0.5)" : "none"
+    }}>
       <div className="user-avatar">
         <img src={profilePicture} alt="user avatar" />
         <div className="edit-profile-picture">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./About.css";
 import "./Work.css";
 import Testimonial from "../About/Testimonial";
@@ -6,17 +6,21 @@ import Contact from "../About/Contact";
 import Experience from "../About/Experience";
 import Work from "../About/Work";
 import { NavLink } from "react-router-dom";
+import { themeContext } from "../../Context";
 
 function Intro() {
+  // context
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <>
       <div className="About">
         <div className="About-name">
-          <span>AboutUs</span>
+          <span style={{ color: darkMode ? "white" : "" }}>AboutUs</span>
           <span>
            Bring Real World Shopping experience online
           </span>
-          <span>
+          <span style={{ color: darkMode ? "white" : "" }}>
           The leading virtual fitting and styling solution for businesses of all sizes
 
 Try on items, get accurate size visualization experience and style outfits 

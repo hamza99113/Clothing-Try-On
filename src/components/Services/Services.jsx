@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Services.css";
 import heartemoji from "../../images/heartemoji.png";
 import glasses from "../../images/glasses.png";
@@ -6,8 +6,14 @@ import humble from "../../images/humble.png";
 import Card from "../Card/Card";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
+import { themeContext } from "../../Context";
 
 function Services() {
+
+  // context
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
+
   const transition = {
     duration: 1,
     type: "spring",
@@ -16,9 +22,9 @@ function Services() {
     <div className="services">
       {/* left div */}
       <div className="awesom">
-        <span>METAWEAR</span>
-        <span>Services Include</span>
-        <span>
+        <span style={{ color: darkMode ? "#088178" : "" }}>METAWEAR</span>
+        <span style={{ color: darkMode ? "white" : "" }}>Services Include</span>
+        <span style={{ color: darkMode ? "white" : "" }}>
           {" "}
           Mapping your favourite outfits on your 2d images  so <br /> you can visualize yourself in that outfit and make you buying decision more quickly.{" "}
         </span>
@@ -27,7 +33,7 @@ function Services() {
       </div>
 
       {/* right div */}
-      <div className="cards">
+      <div className="cards" style={{ color: darkMode ? "#088178" : "" }}>
       <motion.div
           initial={{ left: "25rem" }}
           whileInView={{ left: "14rem" }}

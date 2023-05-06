@@ -58,7 +58,7 @@ export default function Review({
         {cartItem.map((product) => (
           <ListItem key={product.id} sx={{ py: 1, px: 0 }}>
             <ListItemText primary={product.name} />
-            <Typography variant="body2">{product.price}</Typography>
+            <Typography sx={{ color: "black" }} variant="body2">{product.price}</Typography>
           </ListItem>
         ))}
 
@@ -83,8 +83,8 @@ export default function Review({
           <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
             Shipping
           </Typography>
-          <Typography gutterBottom>{firstName + " " + LastName}</Typography>
-          <Typography gutterBottom>{address1}</Typography>
+          <Typography sx={{ color: "black" }} gutterBottom>{firstName + " " + LastName}</Typography>
+          <Typography sx={{ color: "black" }} gutterBottom>{address1}</Typography>
         </Grid>
         <Grid item container direction="column" xs={12} sm={6}>
           <Typography variant="h6" gutterBottom sx={{ mt: 2}}>
@@ -94,10 +94,10 @@ export default function Review({
             {payments.map((payment) => (
               <React.Fragment key={payment.name}>
                 <Grid item xs={6}>
-                  <Typography gutterBottom>{payment.name}</Typography>
+                  <Typography sx={{ color: "black" }} gutterBottom>{payment.name}</Typography>
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography gutterBottom>{payment.detail}</Typography>
+                  <Typography sx={{ color: "black" }} gutterBottom>{payment.detail}</Typography>
                 </Grid>
               </React.Fragment>
             ))}

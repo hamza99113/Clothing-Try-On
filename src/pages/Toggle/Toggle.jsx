@@ -12,7 +12,10 @@ const Toggle = () => {
     theme.dispatch({ type: "toggle" });
   };
   return (
-    <div className='main-Dark'>
+    <div className='main-Dark' style={{ 
+      background: darkMode ? "#222" : "", 
+      boxShadow: darkMode ? "0 0 10px rgba(255, 255, 255, 0.5)" : "none"
+    }}>
       <h3 className='tog'>Dark Mode:</h3>
     <div className="toggle" onClick={handleClick}>
       <Moon />

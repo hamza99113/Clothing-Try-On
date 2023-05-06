@@ -1,7 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './EditProfileDetails.css';
+import { themeContext } from "../../Context";
 
 function EditProfileDetails() {
+  // context
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -33,12 +38,15 @@ function EditProfileDetails() {
   };
 
   return (
-    <div className='editpro'>
+    <div className='editpro'style={{ 
+      background: darkMode ? "#222" : "", 
+      boxShadow: darkMode ? "0 0 10px rgba(255, 255, 255, 0.5)" : "none"
+    }}>
       <h2>Edit Profile Details</h2>
       <form onSubmit={handleSubmit}>
         
         <div className='Edit-form-details'>
-        <label htmlFor="name" className='editpro-label'>Name:</label>
+        <label htmlFor="name" className='editpro-label' style={{ color: darkMode ? "white" : "" }}>Name:</label>
         <input
           className='editpro-label'
           type="text"
@@ -48,7 +56,7 @@ function EditProfileDetails() {
         /></div>
         
         <div className='Edit-form-details'>
-        <label htmlFor="email" className='editpro-label'>Email:</label>
+        <label htmlFor="email" className='editpro-label' style={{ color: darkMode ? "white" : "" }}>Email:</label>
         <input
           className='editpro-label'
           type="email"
@@ -58,7 +66,7 @@ function EditProfileDetails() {
         /></div>
 
         <div className='Edit-form-details'>
-          <label htmlFor="phone" className='editpro-label'>Phone Number:</label>
+          <label htmlFor="phone" className='editpro-label' style={{ color: darkMode ? "white" : "" }}>Phone Number:</label>
           <input
             className='editpro-label'
             type="tel"
@@ -68,7 +76,7 @@ function EditProfileDetails() {
           /></div>
 
         <div className='Edit-gen-details'>
-          <label htmlFor="gender"className='editpro-label'>Gender:</label>
+          <label htmlFor="gender"className='editpro-label' style={{ color: darkMode ? "white" : "" }}>Gender:</label>
         <select id="gender" value={gender} onChange={handleGenderChange}>
           <option value="">Select Gender</option>
           <option value="male">Male</option>

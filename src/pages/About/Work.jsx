@@ -5,15 +5,15 @@ import limelight from "../../images/limelight.png";
 import gulahmed from "../../images/gulahmed.png";
 import khadi from "../../images/khadi.png";
 import Jun from "../../images/Jun.png";
-// import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
+import { themeContext } from "../../Context";
+ 
 
-import {Link} from 'react-scroll'
 const Works = () => {
   // context
-//   const theme = useContext(themeContext);
-//   const darkMode = theme.state.darkMode;
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
 
   // transition
   return (
@@ -22,11 +22,11 @@ const Works = () => {
       <div className="w-left">
         <div className="awesome">
           {/* dark Mode */}
-          <span >
+          <span style={{ color: darkMode ? "white" : "" }}>
             Works for All these
           </span>
           <span>Brands & Clients</span>
-          <spane>
+          <spane style={{ color: darkMode ? "white" : "" }}>
             Lorem ispum is simpley dummy text of printing of printing Lorem
             <br />
             ispum is simpley dummy text of printingLorem ispum is simpley dummy

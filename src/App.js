@@ -26,7 +26,7 @@ function App() {
   const darkMode = theme.state.darkMode;
   return (
     <div className="App" style={{
-      background: darkMode ? "black" : ""
+      background: darkMode ? "#222" : ""
     }}>
       <Navbar />
       <Routes>

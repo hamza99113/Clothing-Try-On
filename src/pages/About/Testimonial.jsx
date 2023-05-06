@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Testimonial.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-
 import { Pagination } from "swiper";
 import "swiper/css/pagination";
 import profilePic1 from "../../images/profile1.jpg";
 import profilePic2 from "../../images/profile2.jpg";
 import profilePic3 from "../../images/profile3.jpg";
 import profilePic4 from "../../images/profile4.jpg";
+import { themeContext } from "../../Context";
 
 const Testimonial = () => {
+  // context
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
+  
   const clients = [
     {
       img: profilePic1,
@@ -37,9 +41,9 @@ const Testimonial = () => {
   return (
     <div className="t-wrapper">
       <div className="t-heading">
-        <span>Clients always get </span>
+        <span style={{ color: darkMode ? "white" : "" }}>Clients always get </span>
         <span>Exceptional Work </span>
-        <span>from me...</span>
+        <span style={{ color: darkMode ? "white" : "" }}>from me...</span>
         <div
           className="blur t-blur1"
           style={{ background: "var(--purple)" }}
@@ -57,7 +61,7 @@ const Testimonial = () => {
             <SwiperSlide key={index}>
               <div className="testimonial">
                 <img src={client.img} alt="" />
-                <span>{client.review}</span>
+                <span style={{ color: darkMode ? "white" : "" }}>{client.review}</span>
               </div>
             </SwiperSlide>
           );

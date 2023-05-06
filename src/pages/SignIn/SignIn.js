@@ -1,13 +1,18 @@
+import React, { useContext} from "react";
 import "./SignIn.css";
-import React from "react";
 import profile from "../../images/profile.png";
 import email from "../../images/email.jpg";
 import pass from "../../images/pass.png";
 import SignUp from "../SignUp/SignUp";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { themeContext } from "../../Context";
 
 function SignIn() {
+
+  // context
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
 
   const [passwordVisible, setPasswordVisible] = useState(false);
 
@@ -93,9 +98,9 @@ function SignIn() {
               </button>
             </div>
 
-            <p className="link">Don't have an Account?
+            <p className="link" style={{ color: darkMode ? "white" : "" }}>Don't have an Account?
               <NavLink to="/SignUp">
-                <a href="#">Sign Up</a>
+                <a href="#" style={{ color: darkMode ? "white" : "" }}>Sign Up</a>
               </NavLink>
             </p>
           </div>

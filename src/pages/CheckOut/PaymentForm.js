@@ -109,7 +109,7 @@ export default function PaymentForm({
             control={
               <Checkbox
                 sx={{ color: "black" }}
-                color="secondary"
+                
                 name="saveCard"
                 value="yes"
               />

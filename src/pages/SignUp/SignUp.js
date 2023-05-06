@@ -1,11 +1,15 @@
+import React, { useContext} from "react";
 import "./SignUp.css";
-import React from "react";
 import profile from "../../images/profile.png";
 import email from "../../images/email.jpg";
 import pass from "../../images/pass.png";
 import { NavLink } from "react-router-dom";
+import { themeContext } from "../../Context";
 
 function SignUp() {
+  // context
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <div className="su-main">
       <div className="su-sub-main">
@@ -47,9 +51,9 @@ function SignUp() {
               <button className="button signup-button">SignUp</button>
             </div>
 
-            <p className="su-link"> Already have account?
+            <p className="su-link" style={{ color: darkMode ? "white" : "" }}> Already have account?
               <NavLink to="/SignIn">
-                <a href="#">Sign In</a>
+                <a href="#" style={{ color: darkMode ? "white" : "" }}>Sign In</a>
               </NavLink>
             </p>
           </div>

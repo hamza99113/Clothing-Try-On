@@ -16,18 +16,7 @@ import AddressForm from "./AddressForm";
 import PaymentForm from "./PaymentForm";
 import Review from "./Review";
 import { lighten } from '@mui/material/styles';
-function Copyright() {
-  return (
-    <Typography variant="body2" color="white" align="center">
-      {"Copyright © "}
-      <Link color="white" href="https://mui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
+
 
 const steps = ["Shipping address", "Payment details", "Review your order"];
 
@@ -129,12 +118,13 @@ export default function Checkout() {
             component="h1"
             variant="h4"
             align="center"
+            style={{ color: "#222"}}
           >
             Checkout
           </Typography>
           <Stepper activeStep={activeStep} sx={{ pt: 3, pb: 5 }}>
             {steps.map((label) => (
-              <Step key={label}>
+              <Step key={label} >
                 <StepLabel>{label}</StepLabel>
               </Step>
             ))}
@@ -194,7 +184,7 @@ export default function Checkout() {
 
                 <Button
                   className="button"
-                  style={{ backgroundColor: "black", color: "white" }}
+                  style={{ backgroundColor: "#088178", color: "white" }}
                   variant="contained"
                   onClick={handleNext}
                   sx={{ mt: 3, ml: 1 }}
@@ -213,7 +203,6 @@ export default function Checkout() {
             </React.Fragment>
           )}
         </Paper>
-        {/* <Copyright /> */}
       </Container>
     </ThemeProvider>
   );
