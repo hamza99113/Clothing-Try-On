@@ -30,6 +30,7 @@ function UserProfile() {
 
   return (
     <div className="user-profile-container" style={{ 
+      background: darkMode ? "#222" : "", 
       boxShadow: darkMode ? "0 0 10px rgba(255, 255, 255, 0.5)" : "none"
     }}>
       <div className="user-avatar">

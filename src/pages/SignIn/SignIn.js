@@ -75,6 +75,7 @@ function SignIn() {
                 type={passwordVisible ? "text" : "password"}
                 placeholder="password"
                 className="name input-field-style"
+                style={{ fontSize: "18px" }}
               />
               
               <label className="password-checkbox">
@@ -82,7 +83,7 @@ function SignIn() {
                 type="checkbox"
                 checked={passwordVisible}
                 onChange={handleTogglePasswordVisibility}/>Show Password
-              </label>
+              </label> 
 
             </div>
             <div className="login-button">

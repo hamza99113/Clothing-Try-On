@@ -42,7 +42,6 @@ function Cart() {
               </div>
               <div className="about">
                 <h1 className="title" style={{ color: darkMode ? "white" : "" }}>{item?.name}</h1>
-                <h3 className="subtitle" style={{ color: darkMode ? "white" : "" }}>Size</h3>
                 <img src={item?.image} style={{ height: "30px" }} />
               </div>
               <div className="counter">
@@ -54,7 +53,7 @@ function Cart() {
                 </div>
                 <div className="count" style={{ color: darkMode ? "white" : "" }}>{item?.quantity}</div>
                 <div
-                  className="btn"
+                  className="btn" 
                   onClick={() => dispatch(removeItemQuantity(item))}
                 >
                   -

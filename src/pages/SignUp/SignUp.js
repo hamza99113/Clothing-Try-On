@@ -1,8 +1,7 @@
 import React, { useContext} from "react";
+import { useState } from "react";
 import "./SignUp.css";
 import profile from "../../images/profile.png";
-import email from "../../images/email.jpg";
-import pass from "../../images/pass.png";
 import { NavLink } from "react-router-dom";
 import { themeContext } from "../../Context";
 
@@ -10,6 +9,12 @@ function SignUp() {
   // context
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
+  const handleTogglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
   return (
     <div className="su-main">
       <div className="su-sub-main">
@@ -42,11 +47,20 @@ function SignUp() {
             <div className="su-second-input">
               
               <input
-                type="password"
+                type={passwordVisible ? "text" : "password"}
                 placeholder="Password"
                 className="su-name input-field-style"
+                style={{ fontSize: "18px" }}
               />
             </div>
+
+            <label className="password-checkbox">
+              <input
+                type="checkbox"
+                checked={passwordVisible}
+                onChange={handleTogglePasswordVisibility}/>Show Password
+            </label> 
+
             <div className="su-login-button">
               <button className="button signup-button">SignUp</button>
             </div>

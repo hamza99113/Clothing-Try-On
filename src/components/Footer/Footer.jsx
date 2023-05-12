@@ -1,12 +1,13 @@
 import React from 'react';
 import './Footer.css';
-import Insta from "@iconscout/react-unicons/icons/uil-instagram";
-import Facebook from "@iconscout/react-unicons/icons/uil-facebook";
 import Gitub from "@iconscout/react-unicons/icons/uil-github";
 import logo from '../../images/logo.png';
 import { NavLink } from "react-router-dom";
 
 function Footer() {
+  const handleLinkClick = () => {
+    window.open("https://github.com/hamza99113/Clothing-Try-On", "_blank");
+  };
   return (
     <div className="color">
     <div className="logo"><img src={logo} alt="" /></div>
@@ -60,9 +61,7 @@ function Footer() {
       <div className="col4">
           <h4>Follow Us</h4>
           <div className="icon">
-          <Insta color="white" size={"3rem"} />
-          <Facebook color="white" size={"3rem"} />
-          <Gitub color="white" size={"3rem"} />
+            <div><Gitub color="white" size={"3rem"} onClick={handleLinkClick}/></div>
           </div>
       </div>
     </div>

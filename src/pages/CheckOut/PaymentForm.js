@@ -10,7 +10,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import visa from "./../../images/visa.png";
-import jazzCash from "./../../images/Jazz.svg";
+import Debitcard from "./../../images/Debitcard.png";
 import easypaisa from "./../../images/easypaisa.png";
 import cod from "./../../images/cod.png";
 
@@ -51,21 +51,13 @@ export default function PaymentForm({
                 />{" "}
                 Cash On Delivery
               </MenuItem>
-              <MenuItem value={"JazzCash"}>
+              <MenuItem value={"Debitcard"}>
                 <img
-                  height={"30px"}
+                  height={"40px"}
                   style={{ marginRight: "5px" }}
-                  src={jazzCash}
+                  src={Debitcard}
                   alt="visa"
-                />{" "}
-              </MenuItem>
-              <MenuItem value={"EasyPaisa"}>
-                <img
-                  height={"30px"}
-                  style={{ marginRight: "5px" }}
-                  src={easypaisa}
-                  alt="visa"
-                />{" "}
+                />{" "} Debit card
               </MenuItem>
             </Select>
           </FormControl>

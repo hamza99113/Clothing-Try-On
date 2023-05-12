@@ -12,7 +12,7 @@ const Complaints = () => {
       background: darkMode ? "#222" : "", 
       boxShadow: darkMode ? "0 0 10px rgba(255, 255, 255, 0.5)" : "none"
     }}>
-      <h1 style={{ color: darkMode ? "white" : "" }}>File a Complaint</h1>
+      <h1>File a Complaint</h1>
       <form className="complaint-form">
         <div className="form-group">
           <label htmlFor="name" style={{ color: darkMode ? "white" : "" }}>Name:</label>

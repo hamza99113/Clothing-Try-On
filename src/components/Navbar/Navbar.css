@@ -55,6 +55,9 @@
   margin-top: 20px;
   font-weight: 700;
 }
+.nav-li:hover {
+  color: #088178;
+}
 .navlink{
   color: black !important;
 }
@@ -66,3 +69,7 @@
 margin-top: 25px;
 margin-left: 10px;
 }
+
+.navlink-Cart:hover{
+  color: #088178;
+  }
