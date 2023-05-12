@@ -22,7 +22,6 @@ function Navbar() {
     <div className="n-wrapper">
       <div className="n-left">
       <img src={logo}alt="" />
-        {/* <div className="n-name">TryOn couture</div> */}
       </div>
       <div className="n-right">
         <div className="n-list">

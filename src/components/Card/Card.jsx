@@ -9,7 +9,7 @@ const Card = ({emoji, heading, detail, color}) => {
   return (
     <div>
     <div className="card" style={{borderColor: {color},background: darkMode ? "#222" :"", color: darkMode ? "#088178" : "" }}> 
-      <img src={emoji} alt="" />
+    <img src={emoji} alt="" style={{ height: '125px' }} />
       <span>{heading}</span>
       <span style={{ color: darkMode ? "white" : "" }}>{detail}</span>
       <button className="c-button"style={{background: darkMode ? "#088178" : "", color: darkMode ? "white" : ""}}>LEARN MORE</button>

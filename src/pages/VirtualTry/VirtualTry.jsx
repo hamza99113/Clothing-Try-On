@@ -341,11 +341,8 @@ function VirtualTry() {
               <div class="img-drop-down">
                 <span onClick={() => setIsCamera(true)}>Capture Image</span>
                 <Upload {...props}>
-                  <span  style={{ color: "white" }}>Upload from Device</span>
+                  <span>Upload from Device</span>
                 </Upload>
-                <span onClick={() => handleOpenPicker()} >
-                  Upload from Drive
-                </span>
               </div>
             </div>
           </div>

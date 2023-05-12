@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import "./Services.css";
-import heartemoji from "../../images/heartemoji.png";
-import glasses from "../../images/glasses.png";
-import humble from "../../images/humble.png";
+import Cart from "../../images/Cards/1.png";
+import Mapping from "../../images/Cards/2.png";
+import Outfit from "../../images/Cards/3.png";
 import Card from "../Card/Card";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
@@ -40,7 +40,7 @@ function Services() {
           transition={transition}
         >
         <Card
-            emoji={heartemoji}
+            emoji={Outfit}
             heading={"styled outfits "}
             detail={"Western style clothing is finally Here!!! of your favourite Brands"}
           />
@@ -52,7 +52,7 @@ function Services() {
           transition={transition}
         >
         <Card
-            emoji={glasses}
+            emoji={Mapping}
             heading={"Mapping"}
             detail={" Gives you best visualization experience of your favourite outfit"}
           />
@@ -65,7 +65,7 @@ function Services() {
           transition={transition}
           >
         <Card
-            emoji={humble}
+            emoji={Cart}
             heading={"online purchase"}
             detail={"Purchase your styled outfit with more ease"}
           />
