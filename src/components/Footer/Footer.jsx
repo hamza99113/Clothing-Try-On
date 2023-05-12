@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import Gitub from "@iconscout/react-unicons/icons/uil-github";
+import LinkedInIcon from "@iconscout/react-unicons/icons/uil-linkedin";
 import logo from '../../images/logo.png';
 import { NavLink } from "react-router-dom";
 
@@ -8,6 +9,11 @@ function Footer() {
   const handleLinkClick = () => {
     window.open("https://github.com/hamza99113/Clothing-Try-On", "_blank");
   };
+
+  const handleLinkClicks = () => {
+    window.open("https://www.linkedin.com/in/ali-hamza-2504b2193", "_blank");
+  };
+
   return (
     <div className="color">
     <div className="logo"><img src={logo} alt="" /></div>
@@ -62,6 +68,7 @@ function Footer() {
           <h4>Follow Us</h4>
           <div className="icon">
             <div><Gitub color="white" size={"3rem"} onClick={handleLinkClick}/></div>
+            <div><LinkedInIcon  color="white" size={"3rem"} onClick={handleLinkClicks}/></div>
           </div>
       </div>
     </div>
